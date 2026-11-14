@@ -3,7 +3,7 @@ import requests
 
 
 def test_get_user_info(user, api_url):
-    """Проверяет получение информации о пользователе."""
+    """Verify user data"""
     with allure.step("GET /users/me"):
         response = requests.get(
             f"{api_url}/users/me",

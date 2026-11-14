@@ -3,7 +3,7 @@ import requests
 
 
 def test_delete_user(user, api_url):
-    """Проверяет удаление пользователя."""
+    """Verify user is deleted"""
     with allure.step("DELETE /users/me"):
         response = requests.delete(
             f"{api_url}/users/me",

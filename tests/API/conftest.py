@@ -6,12 +6,12 @@ import allure
 
 from basemodels.user.user_models import User
 
-# --- Эндпоинты ---
+# --- Endpionts ---
 REGISTER_ENDPOINT = '/users'
 DELETE_ENDPOINT = '/users/me'
 
 
-# --- Фикстуры ---
+# --- Fixtures ---
 @pytest.fixture
 def user_password():
     password = os.getenv("MY_APP_PASSWORD")
