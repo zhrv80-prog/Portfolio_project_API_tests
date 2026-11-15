@@ -2,12 +2,12 @@ import allure
 import requests
 
 
-def test_delete_user(user, api_url):
+def test_delete_user(user_lifecycle, api_url):
     """Verify user is deleted"""
     with allure.step("DELETE /users/me"):
         response = requests.delete(
             f"{api_url}/users/me",
-            headers={"Authorization": f"Bearer {user['token']}"}
+            headers={"Authorization": f"Bearer {user_lifecycle['token']}"}
         )
 
     with allure.step("Verify status code is 200"):
@@ -16,6 +16,6 @@ def test_delete_user(user, api_url):
     with allure.step("Verify user is deleted"):
         check = requests.get(
             f"{api_url}/users/me",
-            headers={"Authorization": f"Bearer {user['token']}"}
+            headers={"Authorization": f"Bearer {user_lifecycle['token']}"}
         )
         assert check.status_code == 401

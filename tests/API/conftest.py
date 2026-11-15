@@ -25,7 +25,7 @@ def api_url():
 
 
 @pytest.fixture
-def user(api_url, user_password):
+def user_lifecycle(api_url, user_password):
     # --- SETUP: create user ---
     email = f"testuser{uuid.uuid4().hex[:8]}@example.com"
 

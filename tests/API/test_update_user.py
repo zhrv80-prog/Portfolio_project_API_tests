@@ -2,25 +2,26 @@ import uuid
 import allure
 import requests
 
+from basemodels.user.user_models import UserUpdate
 
-def test_update_user(user, api_url):
+def test_update_user(user_lifecycle, api_url):
     """
     Verify opportunity to update data through PATCH /users/me.
     """
     new_email = f"updated{uuid.uuid4().hex[:8]}@example.com"
 
-    updated_payload = {
-        "firstName": "Updated",
-        "lastName": "Username",
-        "email": new_email,
-        "password": "myNewPassword",
-    }
+    updated = UserUpdate(
+        firstName="Updated",
+        lastName="Username",
+        email=new_email,
+        password="myNewPassword",
+    )
 
     with allure.step("PATCH /users/me"):
         response = requests.patch(
             f"{api_url}/users/me",
-            headers={"Authorization": f"Bearer {user['token']}"},
-            json=updated_payload,
+            headers={"Authorization": f"Bearer {user_lifecycle['token']}"},
+            json=updated.to_dict(),
         )
 
     with allure.step("Verify status code is 200"):
