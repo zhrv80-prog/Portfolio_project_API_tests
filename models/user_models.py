@@ -1,9 +1,10 @@
 from dataclasses import dataclass, asdict
 from typing import Optional
 
-# Data model
+
 @dataclass
 class User:
+    """Модель для создания пользователя (все поля обязательны)."""
     firstName: str
     lastName: str
     email: str
@@ -15,6 +16,7 @@ class User:
 
 @dataclass
 class UserUpdate:
+    """Модель для обновления (все поля опциональны)."""
     firstName: Optional[str] = None
     lastName: Optional[str] = None
     email: Optional[str] = None

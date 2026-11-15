@@ -1,13 +1,14 @@
 import uuid
+
 import allure
-import requests
+import pytest
 
-from basemodels.user.user_models import UserUpdate
+from models.user_models import UserUpdate
 
-def test_update_user(user_lifecycle, api_url):
-    """
-    Verify opportunity to update data through PATCH /users/me.
-    """
+
+@pytest.mark.regression
+def test_update_user(user, users_api):
+    """Проверяет обновление данных пользователя."""
     new_email = f"updated{uuid.uuid4().hex[:8]}@example.com"
 
     updated = UserUpdate(
@@ -17,17 +18,12 @@ def test_update_user(user_lifecycle, api_url):
         password="myNewPassword",
     )
 
-    with allure.step("PATCH /users/me"):
-        response = requests.patch(
-            f"{api_url}/users/me",
-            headers={"Authorization": f"Bearer {user_lifecycle['token']}"},
-            json=updated.to_dict(),
-        )
+    response = users_api.update(user["token"], updated)
 
     with allure.step("Verify status code is 200"):
         assert response.status_code == 200, f"Update failed: {response.text}"
 
-    with allure.step("Verify response contains updated data"):
+    with allure.step("Verify updated data"):
         body = response.json()
         assert body["firstName"] == "Updated"
         assert body["lastName"] == "Username"
