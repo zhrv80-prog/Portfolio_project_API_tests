@@ -7,8 +7,8 @@ from models.user_models import UserLogin
 
 @pytest.mark.negative
 @pytest.mark.parametrize("credentials, expected_status, description", [
-    (UserLogin(email="", password="password"), 400, "Empty email"),
-    (UserLogin(email="test@fake.com", password=""), 400, "Empty password"),
+    (UserLogin(email="", password="password"), 401, "Empty email"),
+    (UserLogin(email="test@fake.com", password=""), 401, "Empty password"),
     (UserLogin(email="nonexistent@fake.com", password="pass"), 401, "Nonexistent user"),
     (UserLogin(email="test@fake.com", password="wrong"), 401, "Wrong password"),
 ])

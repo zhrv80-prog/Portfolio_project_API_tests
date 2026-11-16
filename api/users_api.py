@@ -56,7 +56,6 @@ class UsersApi:
             return response
 
     # --- LOGIN ---
-
     def login(self, credentials: UserLogin) -> requests.Response:
         with allure.step(f"POST /users/login (email={credentials.email})"):
             response = self.session.post(
@@ -67,7 +66,6 @@ class UsersApi:
             return response
 
     # --- LOGOUT ---
-
     def logout(self, token: str) -> requests.Response:
         with allure.step("POST /users/logout"):
             response = self.session.post(
