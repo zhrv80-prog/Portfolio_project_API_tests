@@ -1,5 +1,3 @@
-# tests/test_login_negative.py
-
 import allure
 import pytest
 from models.user_models import UserLogin
