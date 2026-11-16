@@ -66,6 +66,17 @@ class UsersApi:
             logger.info(f"POST /users/login → {response.status_code}")
             return response
 
+    # --- LOGOUT ---
+
+    def logout(self, token: str) -> requests.Response:
+        with allure.step("POST /users/logout"):
+            response = self.session.post(
+                f"{self.base_url}/users/logout",
+                headers=self._auth_headers(token),
+            )
+            logger.info(f"POST /users/logout → {response.status_code}")
+            return response
+
     # --- helpers ---
     @staticmethod
     def _auth_headers(token: str) -> dict:
