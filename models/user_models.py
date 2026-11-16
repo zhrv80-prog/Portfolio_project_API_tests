@@ -24,3 +24,11 @@ class UserUpdate:
 
     def to_dict(self) -> dict:
         return {k: v for k, v in asdict(self).items() if v is not None}
+
+@dataclass
+class UserLogin:
+    email: str
+    password: str
+
+    def to_dict(self) -> dict:
+        return asdict(self)

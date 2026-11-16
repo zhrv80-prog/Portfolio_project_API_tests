@@ -2,7 +2,7 @@ import logging
 import allure
 import requests
 
-from models.user_models import User, UserUpdate
+from models.user_models import User, UserUpdate, UserLogin
 
 logger = logging.getLogger(__name__)
 
@@ -53,6 +53,17 @@ class UsersApi:
                 headers=self._auth_headers(token),
             )
             logger.info(f"DELETE /users/me → {response.status_code}")
+            return response
+
+    # --- LOGIN ---
+
+    def login(self, credentials: UserLogin) -> requests.Response:
+        with allure.step(f"POST /users/login (email={credentials.email})"):
+            response = self.session.post(
+                f"{self.base_url}/users/login",
+                json=credentials.to_dict(),
+            )
+            logger.info(f"POST /users/login → {response.status_code}")
             return response
 
     # --- helpers ---
