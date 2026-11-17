@@ -37,3 +37,5 @@ cd Portfolio_project_tests
 
 Проект интегрирован с Jenkins. 
 Пайплайн автоматически запускает тесты при пуше в репозиторий. Конфигурация пайплайна находится в файле Jenkinsfile
+
+![jenkins.JPG](pictures/jenkins.JPG)

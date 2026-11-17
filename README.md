@@ -37,3 +37,5 @@ cd Portfolio_project_tests
 ```
 ## Jenkins
 The project is integrated with Jenkins. The pipeline automatically runs tests when changes are pushed to the repository. The pipeline configuration is stored in the Jenkinsfile.
+
+![jenkins.JPG](pictures/jenkins.JPG)
