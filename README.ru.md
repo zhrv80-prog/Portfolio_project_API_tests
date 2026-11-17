@@ -32,3 +32,8 @@
 ```bash
 git clone https://github.com/zhrv80-prog/PythonProject.git
 cd Portfolio_project_tests
+```
+## Jenkins
+
+Проект интегрирован с Jenkins. 
+Пайплайн автоматически запускает тесты при пуше в репозиторий. Конфигурация пайплайна находится в файле Jenkinsfile
