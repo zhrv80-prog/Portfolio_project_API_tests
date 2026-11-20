@@ -35,11 +35,15 @@
 git clone https://github.com/zhrv80-prog/PythonProject.git
 cd Portfolio_project_tests
 ```
+## Allure
+
+![Allure.JPG](pictures/Allure.JPG)
+
 ## Jenkins
 The project is integrated with Jenkins. The pipeline automatically runs tests when changes are pushed to the repository. The pipeline configuration is stored in the Jenkinsfile.
 
-![jenkins.JPG](pictures/jenkins.JPG)
+![jenkins.JPG](pictures/Jenkins.JPG)
 
-## Allure report
+## Allure report in Jenkins
 
-![Allure.JPG](pictures/Allure.JPG)
+![Allure.JPG](pictures/Allure_Jenkins.JPG)

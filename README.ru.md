@@ -33,13 +33,17 @@
 git clone https://github.com/zhrv80-prog/PythonProject.git
 cd Portfolio_project_tests
 ```
+## Allure отчет
+
+![Allure.JPG](pictures/Allure.JPG)
+
 ## Jenkins
 
 Проект интегрирован с Jenkins. 
 Пайплайн автоматически запускает тесты при пуше в репозиторий. Конфигурация пайплайна находится в файле Jenkinsfile
 
-![jenkins.JPG](pictures/jenkins.JPG)
+![jenkins.JPG](pictures/Jenkins.JPG)
 
-## Allure отчет
+## Allure отчет в Jenkins 
 
-![Allure.JPG](pictures/Allure.JPG)
+![Allure.JPG](pictures/Allure_Jenkins.JPG)
