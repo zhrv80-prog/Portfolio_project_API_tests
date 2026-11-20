@@ -6,7 +6,13 @@
 [![pytest](https://img.shields.io/badge/pytest-9.1-green)](https://pytest.org/)
 [![Allure](https://img.shields.io/badge/Allure-2.13-orange)](https://allurereport.org/)
 
-
+![Python_icon.png](pictures/icons/Python_icon.png)
+![Pytest_icon.png](pictures/icons/Pytest_icon.png)
+![Allure_icon.png](pictures/icons/Allure_icon.png)
+![GitHub_icon.png](pictures/icons/GitHub_icon.png)
+![PyCharm_icon.png](pictures/icons/PyCharm_icon.png)
+![Requests_icon.png](pictures/icons/Requests_icon.png)
+![Jenkins_icon.png](pictures/icons/Jenkins_icon.png)
 
 ## 📖 API Documentation
 
