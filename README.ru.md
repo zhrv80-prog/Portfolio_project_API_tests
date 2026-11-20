@@ -39,3 +39,7 @@ cd Portfolio_project_tests
 Пайплайн автоматически запускает тесты при пуше в репозиторий. Конфигурация пайплайна находится в файле Jenkinsfile
 
 ![jenkins.JPG](pictures/jenkins.JPG)
+
+## Allure отчет
+
+![Allure.JPG](pictures/Allure.JPG)
