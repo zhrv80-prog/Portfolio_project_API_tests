@@ -36,10 +36,12 @@
 ## 🚀 Installation and Running
 
 ### 💻 1. Clone the repository
+#### - Replase "passwod" with your own value (optional)
 
 ```bash
 git clone https://github.com/zhrv80-prog/PythonProject.git
 cd Portfolio_project_tests
+MY_APP_PASSWORD="password" pytest
 ```
 ## Allure
 
