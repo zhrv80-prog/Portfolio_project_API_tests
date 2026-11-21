@@ -23,6 +23,9 @@
 - Create user
 - Get user info
 - Delete user
+- Update user
+- Login
+- Logout
 
 ## 🛠 Tech Stack
 
